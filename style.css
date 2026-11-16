@@ -1,0 +1,165 @@
+:root {
+    --main_color: #222;
+    --main2_color: #4b4b4b;
+    --secend_color: #111;
+    --hover_color: #c5c5c5;
+    --font_color: #fff;
+    --font_family: system-ui;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(var(--main_color), var(--main2_color));
+    color: var(--font_color);
+    font-family: var(--font_family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    text-transform: uppercase;
+    padding: 10px;
+    animation-name: title;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+@keyframes title {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+        transform: translateX(10px);
+    }
+    
+    75% {
+        transform: rotate(10deg);
+    }
+
+    85% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: translate(0px);
+        transform: rotate(0deg);
+    }
+}
+
+#title::first-letter {
+    color: red;
+    font-size: 45px;
+}
+
+.p {
+    font-weight: bolder;
+    font-size: large;
+    animation-name: chapeau;
+    animation-duration: 1s;
+    animation-delay: s;
+}
+#chapeau {
+    padding: 6px;
+    animation-name:chapeau ;
+    animation-duration: 1s;
+    animation-delay: s;
+}
+@keyframes chapeau {
+    0%{
+        transform: translate(30px);
+        opacity: 0;
+    }
+    50%{
+        transform: translate(-30px);
+    }
+    75%{
+transform: translate(10px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+    
+label,
+input {
+    display: block;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+input {
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+}
+
+input[type="text"] {
+    background: var(--secend_color);
+    color: var(--font_color);
+}
+
+input[type="text"]:focus {
+    transform: scale(1.2);
+    background: #111111e3;
+}
+
+
+#mnkd {
+    height: 300px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background: #1a1a1aad;
+    border-radius: 20px;
+    box-shadow: 10px 15px  10px #525151;
+    animation-name: section;
+    animation-duration: 3s;
+}
+@keyframes section {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-6deg);
+        box-shadow: 30px 35px  10px #525151;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 10px 15px  10px #525151;
+    }
+}
+
+input[type="submit"] {
+    transition: 0.8s;
+    background: white;
+    font-size: large;
+}
+
+input[type="submit"]:hover {
+    background: #c5c5c5;
+}
+
+form {
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
