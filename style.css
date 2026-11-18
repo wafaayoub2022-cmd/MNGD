@@ -33,6 +33,12 @@ header {
 #title {
     text-transform: uppercase;
     padding: 10px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; /* أضفنا -webkit هنا */
+    display: inline-block;
+    background-clip: text;
+    background-image: linear-gradient(to left,#d400ff,#ae00ff,#0051ff);
+    font-size: 3em;
     animation-name: title;
     animation-duration: 1s;
     animation-delay: 0.5s;
@@ -47,7 +53,7 @@ header {
         transform: rotate(-10deg);
         transform: translateX(10px);
     }
-    
+
     75% {
         transform: rotate(10deg);
     }
@@ -62,10 +68,7 @@ header {
     }
 }
 
-#title::first-letter {
-    color: red;
-    font-size: 45px;
-}
+
 
 .p {
     font-weight: bolder;
@@ -74,83 +77,82 @@ header {
     animation-duration: 1s;
     animation-delay: s;
 }
+
 #chapeau {
     padding: 6px;
-    animation-name:chapeau ;
+    animation-name: chapeau;
     animation-duration: 1s;
     animation-delay: s;
 }
+
 @keyframes chapeau {
-    0%{
+    0% {
         transform: translate(30px);
         opacity: 0;
     }
-    50%{
+
+    50% {
         transform: translate(-30px);
     }
-    75%{
-transform: translate(10px);
+
+    75% {
+        transform: translate(10px);
     }
-    100%{
+
+    100% {
         transform: translate(0px);
     }
 }
-    
-label,
-input {
+
+label{
     display: block;
     padding: 5px;
     font-weight: bolder;
 }
 
 input {
+    background: var(--secend_color);
+    color: var(--font_color);
     border: none;
     text-align: center;
     border-radius: 20px;
+    height: 2.5em;
+    width:100% ;
 }
 
-input[type="text"] {
-    background: var(--secend_color);
-    color: var(--font_color);
-}
 
-input[type="text"]:focus {
-    transform: scale(1.2);
+input:focus {
+    transform: scale(1.1);
     background: #111111e3;
 }
 
 
 #mnkd {
-    height: 300px;
-    margin: 40px auto;
-    padding: 20px 40px;
+    margin: 30px;
+    padding: 20px 20px 40px 20px;
+    width: 100%;
     background: #1a1a1aad;
     border-radius: 20px;
-    box-shadow: 10px 15px  10px #525151;
+    box-shadow: 10px 15px 10px #525151;
     animation-name: section;
     animation-duration: 3s;
 }
-@keyframes section {
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(-6deg);
-        box-shadow: 30px 35px  10px #525151;
-    }
-    100%{
-        transform: rotate(360deg);
-        box-shadow: 10px 15px  10px #525151;
-    }
-}
 
-input[type="submit"] {
+/* ujyujky */
+
+#submit {
     transition: 0.8s;
     background: white;
     font-size: large;
+    display: block;
+    padding: 5px;
+    font-weight: bolder;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
 }
 
-input[type="submit"]:hover {
+#submit:hover {
     background: #c5c5c5;
 }
 
