@@ -4,26 +4,24 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mN.kD</title>
+    <title>MN.GD</title>
 </head>
-<body>
+<body dir="rtl">
     <header>
-        <h1 id="title">mN.kD</h1>
-    
+        <h1 id="title" title="هي لغة تم صنعها في 2025 من قبل الصديقان اياد و  ايوب واخذ الاسم من بداية لقب هذان الاخيران">mN.gD</h1>
     <h1 id="chapeau">نرحب بكم في حلقة التحويل لل من.قد</h1>
-    <p class="p">نرجو منكم الاستمتاع بالموقع والاستفادة</p>
     </header>
     <main>
         <section id="mnkd">
-
-        <form>
-            <label for="word">ادخل الكلمة المراد تحويلها:</label>
-            <input type="text" name="word"  placeholder="ادخل كلمتك:" id="word">
-             <button id="submit" >اضغط هنا للتحويل</button>
-            <label for="reselt">النتيجة:</label>
-            <input type="text" id="reselt" placeholder="كلمتك بال من.قد:" readonly >
-        </form>
+                <label for="word">ادخل الكلمة المراد تحويلها:</label>
+                <input type="text" title="ادخل كلمتك" name="word" autofocus   placeholder="ادخل كلمتك:" id="word">
+                <button id="submit" title="اضغط للتحول للمنقد" >اضغط هنا للتحويل</button>
+                <label for="reselt">النتيجة:</label>
+                <input type="text" title="نتيجة عملك" id="reselt" placeholder="كلمتك بال من.قد:" readonly >
+                <span id="copierBtn" title="اضغط لنسخ النتيجة">📋</span>
+                <div id="copy-toast"></div>
         </section>
+
     </main>
    <script src="main.js"></script>
 </body>
