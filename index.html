@@ -12,15 +12,19 @@
     <h1 id="chapeau">نرحب بكم في حلقة التحويل لل من.قد</h1>
     </header>
     <main>
-        <section id="mnkd">
-                <label for="word">ادخل الكلمة المراد تحويلها:</label>
-                <input type="text" title="ادخل كلمتك" name="word" autofocus   placeholder="ادخل كلمتك:" id="word">
-                <button id="submit" title="اضغط للتحول للمنقد" >اضغط هنا للتحويل</button>
-                <label for="reselt">النتيجة:</label>
-                <input type="text" title="نتيجة عملك" id="reselt" placeholder="كلمتك بال من.قد:" readonly >
-                <span id="copierBtn" title="اضغط لنسخ النتيجة">📋</span>
-                <div id="copy-toast"></div>
-        </section>
+        <form>
+
+            <section id="mnkd">
+                    <label for="word">ادخل الكلمة المراد تحويلها:</label>
+                    <input type="text" title="ادخل كلمتك" name="word" autofocus   placeholder="ادخل كلمتك:" id="word">
+                    <button id="submit" title="اضغط للتحول للمنقد" >اضغط هنا للتحويل</button>
+                    <label for="reselt">النتيجة:</label>
+                    <input type="text" title="نتيجة عملك" id="reselt" placeholder="كلمتك بال من.قد:" readonly >
+                    <span id="copierBtn" title="اضغط لنسخ النتيجة">📋</span>
+                    <div id="copy-toast"></div>
+                    <input type="reset" id="reset" value="اعادة">
+            </section>
+        </form>
 
     </main>
    <script src="main.js"></script>

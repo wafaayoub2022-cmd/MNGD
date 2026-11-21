@@ -1,13 +1,20 @@
 let word = document.getElementById("word");
 let submit = document.getElementById("submit");
+let label = document.querySelectorAll("label")
 let reselt = document.getElementById("reselt");
+let chapeau = document.getElementById("chapeau");
 let copierBtn = document.getElementById("copierBtn");
+let reset = document.getElementById("reset")
 let copyToast = document.getElementById("copy-toast");
 let toastTimer = null;
 let hide = null;
 let alphabit = "ابتثجحخدذرزسشصضطظعغفقكلمنهوي7";
 
+reset.onclick = function(){
+    window.location.reload()
+}
 submit.onclick = function (event) {
+    event.preventDefault()
     let value = word.value;
     let newWord = ""
 
@@ -25,22 +32,42 @@ submit.onclick = function (event) {
             newWord = "مك مليحة نت??يخي";
             break
         }
-        if (value.includes("زب") || value.includes("سوا")) {
-            newWord = "صختنا قدوار راك زت فيها";
-            break;
 
-        }
-        if (value === " ") {
-            reselt.value = "اين كلمتك ؟؟؟؟؟"
-            return
-        }
-        if (index == -1) {
-            reselt.value = "mok"
-            return
-        }
-        newWord += alphabit[index + 1];
+            if (value.includes("زب") || value.includes("سوا") || value.includes("نك") || value.includes("نعدين") ) {
+                newWord = "صختنا صاحبي راك زت فيها";
+                document.body.style.background = "red";
+                document.body.style.color = "yellow";
+                reselt.style.scale = "3";
+                word.value = "استغفر الله"
+                word.style.scale = "10"
+                copierBtn.style.display = "none"
+                chapeau.innerText = "حسبي الله ونعم الوكيل"
+                break;
+
     }
-    reselt.value = newWord
+    if(value.includes("الله") || value.includes("لله")){
+        newWord = "الله اكبر ";
+        continue
+    }
+    if (value === " ") {
+        reselt.value = "اين كلمتك ؟؟؟؟؟"
+        return
+    }
+    if (index == -1) {
+        reselt.value = "mok"
+        return
+    }
+    if(letter === "!"){
+        newWord += "!" 
+        continue
+    }
+    if(letter === "?" || letter === "?"){
+        newWord += "?"
+        continue
+    }
+    newWord += alphabit[index + 1];
+}
+reselt.value = newWord
 }
 copierBtn.onclick = async function () {
     clearTimeout(toastTimer);
