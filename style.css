@@ -1,9 +1,10 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
-body{
-    background: linear-gradient(#160011,#0e0116);
+
+body {
+    background: linear-gradient(#160011, #0e0116);
     background-repeat: no-repeat;
     height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -12,49 +13,64 @@ body{
     display: flex;
     flex-direction: column;
 }
-header{
+
+header {
     text-align: center;
     margin: 10px;
 }
-#title{
-    letter-spacing:6px;
-    padding:5px;
+
+#title {
+    letter-spacing: 6px;
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
     text-transform: uppercase;
-    background-image:linear-gradient(to left,#ff0055,#ae00ff, #00aeff ) ;
+    background-image: linear-gradient(to left, #ff0055, #ae00ff, #00aeff);
     color: transparent;
     background-clip: text;
-    font-size: 3em;
-    animation: title 1.5s ease .2s normal both ;
+    -webkit-background-clip: text;
+    display: inline-block;
+    font-size: 100px;
+    cursor: default;
+    animation: title 1.5s linear .2s normal both;
 }
-@keyframes title{
-    0%{
+
+@keyframes title {
+
+    0% {
         opacity: 0;
         transform: translateX(100px);
     }
-    25%{
+    25% {
         opacity: 0.5;
         transform: rotate(10deg);
     }
-    50%{
+    50% {
         transform: rotate(-10deg);
     }
-    75%{
-        filter: drop-shadow(0 0 18px #3700ff);
+    75% {
+        filter: drop-shadow(0 0 18px blue);
     }
+    80% {
+        filter: drop-shadow(0 0 30px blue);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: drop-shadow(0 0 40px #171418);
+    }
+}
 
-    80%{
-        filter: drop-shadow(0 0 30px #3700ff);
-    }
+main {
+    margin-top: 40px;
 }
-main{
-    margin-top:40px ;
-}
-#mnkd{
+
+#mnkd {
     margin-top: 200px;
     background: #ffffff27;
     width: 250px;
     margin: auto;
-    border-radius:30px ;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -63,7 +79,7 @@ main{
     position: relative;
 }
 
-input{
+input {
     background: #0e0e0ece;
     border: none;
     margin: auto;
@@ -75,10 +91,12 @@ input{
     padding: 3px;
     text-align: center;
 }
-input:focus{
+
+input:focus {
     scale: 1.1;
 }
-button{
+
+button {
     border-radius: 20px;
     border: none;
     height: 30px;
@@ -86,41 +104,33 @@ button{
     font-weight: 900;
     font-size: 20px;
     transition: 0.75s;
+    cursor: pointer;
 }
-button:hover{
+
+button:hover {
     background: #aaaaaa;
 }
-input[readonly]{
+
+input[readonly] {
     width: 75%;
     margin: 0;
 }
-span{
-    box-sizing: border-box;
-    background: white;
-    height: 37px;
-    width: 37px;
-    border-radius: 50%;
-    text-align: center;
-    padding: 6px;
-    cursor: pointer;
-    position:absolute;
-    bottom:29px;
-    left: 30px;
-}
-#copy-toast{
-    position:fixed;
+
+#copy-toast {
+    position: fixed;
     left: 20px;
     bottom: 20px;
     text-align: center;
     background: #000;
-    padding: 10px ;
+    padding: 10px;
     width: 180px;
     border-radius: 20px;
     transition: 1s;
     opacity: 0;
     display: none;
 }
-input[type = "reset"]{
+
+input[type="reset"] {
     color: #000;
     background: white;
     position: absolute;
@@ -131,8 +141,26 @@ input[type = "reset"]{
     font-weight: 900;
     width: 60px;
     height: 25px;
-    transition-duration:.5s ;
+    transition-duration: .5s;
 }
-input[type = "reset"]:hover{
+
+input[type="reset"]:hover {
+    background: gainsboro;
+}
+
+#copierBtn {
+    color: black;
+    padding: 5px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 29px;
+    left: 20px;
+    transition: .4s;
+}
+
+#copierBtn:hover {
     background: gainsboro;
 }

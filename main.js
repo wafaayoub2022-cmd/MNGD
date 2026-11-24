@@ -86,6 +86,16 @@ copierBtn.onclick = async function () {
         }, 2000);
 
     } catch (err) {
-        copierBtn.title = 'تعذر النسخ، تحقق من أذونات المتصفح أو الخادم.';
+        copyToast.innerText = " قد فشلت العملية"
+        copyToast.style.display = "block";
+        copyToast.style.opacity = "1"
+        toastTimer = setTimeout(function () {
+            copyToast.style.transition = "1s";
+            copyToast.style.display = "none";
+            hide = setTimeout(function () {
+                copyToast.style.display = "none"
+                copyToast.innerText = ""
+            }, 3000)
+        }, 2000);
     }
 }

@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MN.GD</title>
 </head>
+
 <body dir="rtl">
     <header>
-        <h1 id="title" title="هي لغة تم صنعها في 2025 من قبل الصديقان اياد و  ايوب واخذ الاسم من بداية لقب هذان الاخيران">mN.gD</h1>
-    <h1 id="chapeau">نرحب بكم في حلقة التحويل لل من.قد</h1>
+        <h1 id="title"
+            title="هي لغة تم صنعها في 2025 من قبل الصديقان اياد و  ايوب واخذ الاسم من بداية لقب هذان الاخيران">mN.gD
+        </h1>
+        <h1 id="chapeau">نرحب بكم في حلقة التحويل لل من.قد</h1>
     </header>
     <main>
         <form>
 
             <section id="mnkd">
-                    <label for="word">ادخل الكلمة المراد تحويلها:</label>
-                    <input type="text" title="ادخل كلمتك" name="word" autofocus   placeholder="ادخل كلمتك:" id="word">
-                    <button id="submit" title="اضغط للتحول للمنقد" >اضغط هنا للتحويل</button>
-                    <label for="reselt">النتيجة:</label>
-                    <input type="text" title="نتيجة عملك" id="reselt" placeholder="كلمتك بال من.قد:" readonly >
-                    <span id="copierBtn" title="اضغط لنسخ النتيجة">📋</span>
-                    <div id="copy-toast"></div>
-                    <input type="reset" id="reset" value="اعادة">
+                <label for="word">ادخل الكلمة المراد تحويلها:</label>
+                <input type="text" title="ادخل كلمتك" name="word" autofocus placeholder="ادخل كلمتك:" id="word">
+                <button id="submit" title="اضغط للتحول للمنقد">اضغط هنا للتحويل</button>
+                <label for="reselt">النتيجة:</label>
+                <input type="text" title="نتيجة عملك" id="reselt" placeholder="كلمتك بال من.قد:" readonly>
+                <span id="copierBtn" title="اضغط لنسخ النتيجة">copy !</span>
+                <input type="reset" id="reset" value="اعادة">
             </section>
         </form>
 
+        <div id="copy-toast"></div>
     </main>
-   <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
